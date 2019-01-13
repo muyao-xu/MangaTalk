@@ -36,9 +36,8 @@
                                     <action selector="startButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zkl-Bh-euv"/>
                                 </connections>
                             </button>
-                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" alpha="0.59999999999999998" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Face not detected. Please try again" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0I7-tz-Rnk">
-                                <rect key="frame" x="65" y="616" width="285" height="22"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" alpha="0.59999999999999998" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Face not detected. Please try again" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0I7-tz-Rnk">
+                                <rect key="frame" x="64.666666666666686" y="614" width="285" height="22"/>
                                 <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 <rect key="contentStretch" x="1" y="1" width="1" height="1"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
@@ -49,6 +48,7 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="0I7-tz-Rnk" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="5rM-Xf-3T8"/>
                             <constraint firstItem="PFd-6D-9lG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="AxI-hR-yX9"/>
                             <constraint firstItem="PFd-6D-9lG" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="IB4-Jg-xrM"/>
                             <constraint firstItem="PFd-6D-9lG" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="ZrJ-q5-cN9"/>
@@ -56,6 +56,8 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Sro-L3-vqI" secondAttribute="bottom" constant="40" id="inL-jq-ysx"/>
                             <constraint firstItem="PFd-6D-9lG" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="oZG-QP-xGV"/>
                             <constraint firstItem="PFd-6D-9lG" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="oaC-BL-bEe"/>
+                            <constraint firstItem="0I7-tz-Rnk" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ofx-0c-Uwt"/>
+                            <constraint firstItem="Sro-L3-vqI" firstAttribute="top" secondItem="0I7-tz-Rnk" secondAttribute="bottom" constant="10" id="rgR-Y5-5nr"/>
                             <constraint firstItem="PFd-6D-9lG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="sip-1Q-7At"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
