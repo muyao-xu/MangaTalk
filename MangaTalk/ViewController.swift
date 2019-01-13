@@ -105,7 +105,7 @@ class ViewController: UIViewController, SFSpeechRecognizerDelegate {
                         self.plane.firstMaterial?.diffuse.contentsTransform = SCNMatrix4Translate(SCNMatrix4MakeScale(1, -1, 1), 0, 1, 0)
                         //
                         let planeNode = SCNNode(geometry: self.plane)
-                        planeNode.position = SCNVector3Make(0.0, 0.05, -1)
+                        planeNode.position = SCNVector3Make(0.0, 0.2 , -1)
                         
                         self.sceneView.scene.rootNode.addChildNode(planeNode)
                     }
