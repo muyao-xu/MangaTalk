@@ -28,6 +28,7 @@ class ViewController: UIViewController, SFSpeechRecognizerDelegate {
     let request = SFSpeechAudioBufferRecognitionRequest()
     var recognitionTask: SFSpeechRecognitionTask?
     var isRecording = false
+    var hasDetectedFace = false
     
     private var scannedFaceViews = [UIView]()
     
@@ -83,8 +84,13 @@ class ViewController: UIViewController, SFSpeechRecognizerDelegate {
             DispatchQueue.main.async {
                 //Loop through the resulting faces and add a red UIView on top of them.
                 if let faces = request.results as? [VNFaceObservation] {
-                    for face in faces {
-                        let faceView = UIView(frame: self.faceFrame(from: face.boundingBox))
+                    if faces.count == 0 {
+                        print("No face in the frame")
+                        self.hasDetectedFace = false;
+                        return
+                    }
+                    else {
+                        self.hasDetectedFace = true
                         self.plane = SCNPlane(width: 0.5, height: 0.125)
                         
                         self.plane.cornerRadius = self.plane.width / 8
@@ -119,16 +125,23 @@ class ViewController: UIViewController, SFSpeechRecognizerDelegate {
     }
     
     @IBAction func startButtonTapped(_ sender: Any) {
-        scanForFaces()
+        if hasDetectedFace == false {
+            scanForFaces()
+            if hasDetectedFace == false {
+                return
+            }
+        }
         if isRecording == true {
+            print("ended recording")
             audioEngine.stop()
             recognitionTask?.cancel()
             isRecording = false
             startButton.backgroundColor = UIColor.gray
         } else {
+            print("started recording")
             self.recordAndRecognizeSpeech()
             isRecording = true
-            startButton.backgroundColor = UIColor.red
+            startButton.backgroundColor = UIColor.white
         }
     }
     
@@ -144,6 +157,7 @@ class ViewController: UIViewController, SFSpeechRecognizerDelegate {
         let node = audioEngine.inputNode
         //        guard let node = audioEngine.inputNode else { return }
         let recordingFormat = node.outputFormat(forBus: 0)
+        node.removeTap(onBus: 0)
         node.installTap(onBus: 0, bufferSize: 1024, format: recordingFormat) { buffer, _ in
             self.request.append(buffer)
         }
