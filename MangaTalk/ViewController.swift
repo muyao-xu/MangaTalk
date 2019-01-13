@@ -92,7 +92,7 @@ class ViewController: UIViewController, SFSpeechRecognizerDelegate {
                     }
                     else {
                         self.faceWarningLabel.isHidden = true
-                        self.startButton.setTitle("tap to start", for: [])
+                        self.startButton.setTitle("tap to listen", for: [])
                         self.hasDetectedFace = true
                         self.plane = SCNPlane(width: 0.5, height: 0.125)
                         
@@ -141,12 +141,18 @@ class ViewController: UIViewController, SFSpeechRecognizerDelegate {
             audioEngine.stop()
             recognitionTask?.cancel()
             isRecording = false
-            startButton.setTitle("tap to start", for: [])
-        } else {
+            startButton.setTitle("tap to listen", for: [])
+            startButton.setTitleColor(UIColor(red: 146/255.0, green: 94/255.0, blue: 35/255.0, alpha: 1), for: [])
+            startButton.backgroundColor = UIColor(red: 255/255.0, green: 217/255.0, blue: 120/255.0, alpha: 1)
+
+        }
+        else {
             print("started recording")
             self.recordAndRecognizeSpeech()
             isRecording = true
-            startButton.setTitle("recording", for: [])
+            startButton.setTitle("listening", for: [])
+            startButton.setTitleColor(UIColor.white, for: [])
+            startButton.backgroundColor = UIColor(red: 233/255.0, green: 78/255.0, blue: 63/255.0, alpha: 1)
         }
     }
     
