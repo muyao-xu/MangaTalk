@@ -17,6 +17,7 @@ import Speech
 
 class ViewController: UIViewController, SFSpeechRecognizerDelegate {
     
+    @IBOutlet weak var faceWarningLabel: UILabel!
     @IBOutlet weak var sceneView: ARSCNView!
     @IBOutlet weak var startButton: UIButton!
 //    @IBOutlet weak var detectedTextLabel: UILabel!
@@ -86,10 +87,12 @@ class ViewController: UIViewController, SFSpeechRecognizerDelegate {
                 if let faces = request.results as? [VNFaceObservation] {
                     if faces.count == 0 {
                         print("No face in the frame")
-                        self.hasDetectedFace = false;
-                        return
+                        self.faceWarningLabel.isHidden = false
+                        self.hasDetectedFace = false
                     }
                     else {
+                        self.faceWarningLabel.isHidden = true
+                        self.startButton.setTitle("tap to start", for: [])
                         self.hasDetectedFace = true
                         self.plane = SCNPlane(width: 0.5, height: 0.125)
                         
@@ -126,8 +129,10 @@ class ViewController: UIViewController, SFSpeechRecognizerDelegate {
     
     @IBAction func startButtonTapped(_ sender: Any) {
         if hasDetectedFace == false {
+            
             scanForFaces()
             if hasDetectedFace == false {
+                print("why false")
                 return
             }
         }

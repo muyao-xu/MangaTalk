@@ -29,13 +29,23 @@
                                     <constraint firstAttribute="width" constant="200" id="roT-8E-PaX"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="15"/>
-                                <state key="normal" title="Start Conversation">
+                                <state key="normal" title="Find a face">
                                     <color key="titleColor" red="0.57125995149999997" green="0.3670927484" blue="0.13610473419999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
                                 <connections>
                                     <action selector="startButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zkl-Bh-euv"/>
                                 </connections>
                             </button>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" alpha="0.59999999999999998" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Face not detected. Please try again" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0I7-tz-Rnk">
+                                <rect key="frame" x="65" y="616" width="285" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                <rect key="contentStretch" x="1" y="1" width="1" height="1"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="textColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -51,6 +61,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="faceWarningLabel" destination="0I7-tz-Rnk" id="JIe-0D-B1A"/>
                         <outlet property="sceneView" destination="PFd-6D-9lG" id="vFR-ip-6Ms"/>
                         <outlet property="startButton" destination="Sro-L3-vqI" id="Bck-B0-LBq"/>
                     </connections>
