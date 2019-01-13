@@ -21,10 +21,17 @@
                             <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PFd-6D-9lG">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                             </arscnView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sro-L3-vqI">
-                                <rect key="frame" x="123" y="593" width="128" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Start Conversation"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sro-L3-vqI">
+                                <rect key="frame" x="107" y="646" width="200" height="50"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="lBt-Ux-X8y"/>
+                                    <constraint firstAttribute="width" constant="200" id="roT-8E-PaX"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="15"/>
+                                <state key="normal" title="Start Conversation">
+                                    <color key="titleColor" red="0.57125995149999997" green="0.3670927484" blue="0.13610473419999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
                                 <connections>
                                     <action selector="startButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zkl-Bh-euv"/>
                                 </connections>
@@ -35,6 +42,8 @@
                             <constraint firstItem="PFd-6D-9lG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="AxI-hR-yX9"/>
                             <constraint firstItem="PFd-6D-9lG" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="IB4-Jg-xrM"/>
                             <constraint firstItem="PFd-6D-9lG" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="ZrJ-q5-cN9"/>
+                            <constraint firstItem="Sro-L3-vqI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="chC-vt-lu8"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Sro-L3-vqI" secondAttribute="bottom" constant="40" id="inL-jq-ysx"/>
                             <constraint firstItem="PFd-6D-9lG" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="oZG-QP-xGV"/>
                             <constraint firstItem="PFd-6D-9lG" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="oaC-BL-bEe"/>
                             <constraint firstItem="PFd-6D-9lG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="sip-1Q-7At"/>
