@@ -136,12 +136,12 @@ class ViewController: UIViewController, SFSpeechRecognizerDelegate {
             audioEngine.stop()
             recognitionTask?.cancel()
             isRecording = false
-            startButton.backgroundColor = UIColor.gray
+            startButton.setTitle("tap to start", for: [])
         } else {
             print("started recording")
             self.recordAndRecognizeSpeech()
             isRecording = true
-            startButton.backgroundColor = UIColor.white
+            startButton.setTitle("recording", for: [])
         }
     }
     
