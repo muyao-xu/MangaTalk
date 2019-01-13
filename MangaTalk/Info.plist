@@ -6,7 +6,7 @@
 	<string></string>
 	<key>CFBundleIconFiles</key>
 	<array>
-		<string>icon.jpg</string>
+		<string>icon.png</string>
 	</array>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>

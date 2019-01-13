@@ -15,7 +15,7 @@
 		25EADBA521EAC8D2002BBF49 /* MangaTalkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25EADBA421EAC8D2002BBF49 /* MangaTalkTests.swift */; };
 		25EADBB021EAC8D2002BBF49 /* MangaTalkUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25EADBAF21EAC8D2002BBF49 /* MangaTalkUITests.swift */; };
 		25EADBBE21EAC8EE002BBF49 /* dialog.sks in Resources */ = {isa = PBXBuildFile; fileRef = 25EADBBD21EAC8EE002BBF49 /* dialog.sks */; };
-		25EADBC021EACFB0002BBF49 /* icon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 25EADBBF21EACFB0002BBF49 /* icon.jpg */; };
+		25EADBC221EADED5002BBF49 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 25EADBC121EADED5002BBF49 /* icon.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,7 +50,7 @@
 		25EADBAF21EAC8D2002BBF49 /* MangaTalkUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MangaTalkUITests.swift; sourceTree = "<group>"; };
 		25EADBB121EAC8D2002BBF49 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		25EADBBD21EAC8EE002BBF49 /* dialog.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = dialog.sks; sourceTree = "<group>"; };
-		25EADBBF21EACFB0002BBF49 /* icon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = icon.jpg; sourceTree = "<group>"; };
+		25EADBC121EADED5002BBF49 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,7 +101,7 @@
 		25EADB8E21EAC8D0002BBF49 /* MangaTalk */ = {
 			isa = PBXGroup;
 			children = (
-				25EADBBF21EACFB0002BBF49 /* icon.jpg */,
+				25EADBC121EADED5002BBF49 /* icon.png */,
 				25EADBBD21EAC8EE002BBF49 /* dialog.sks */,
 				25EADB8F21EAC8D0002BBF49 /* AppDelegate.swift */,
 				25EADB9121EAC8D0002BBF49 /* ViewController.swift */,
@@ -236,8 +236,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				25EADB9A21EAC8D2002BBF49 /* LaunchScreen.storyboard in Resources */,
+				25EADBC221EADED5002BBF49 /* icon.png in Resources */,
 				25EADBBE21EAC8EE002BBF49 /* dialog.sks in Resources */,
-				25EADBC021EACFB0002BBF49 /* icon.jpg in Resources */,
 				25EADB9721EAC8D2002BBF49 /* Assets.xcassets in Resources */,
 				25EADB9521EAC8D0002BBF49 /* Main.storyboard in Resources */,
 			);
